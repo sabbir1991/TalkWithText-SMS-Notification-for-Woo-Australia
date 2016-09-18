@@ -1,11 +1,12 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 /**
  * WordPress settings API class
  *
  * @author Tareq Hasan
  */
-
 class SatSMS_Setting_Options {
 
     private $settings_api;

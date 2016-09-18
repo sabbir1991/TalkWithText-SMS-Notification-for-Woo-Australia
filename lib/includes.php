@@ -1,4 +1,6 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 $username = satosms_get_option( 'talkwithtext_username', 'satosms_gateway', '' );
 $password = satosms_get_option( 'talkwithtext_password', 'satosms_gateway', '' );
 $originator = satosms_get_option( 'talkwithtext_originator', 'satosms_gateway', '' );

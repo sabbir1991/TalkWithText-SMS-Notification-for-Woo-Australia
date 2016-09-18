@@ -1,22 +1,22 @@
 <?php
 /*
-Plugin Name: WooCommerce Order SMS Notifications
-Plugin URI: http://sabbirahmed.me/plugins/woocommerce-order-sms-notification/
-Description: This is a WooCommerce add-on. By Using this plugin admin and buyer can get notification after placing order via sms using different SMS gateways.
-Version: 1.5
-Author: NinjaCoders
-Author URI: http://sabbirahmed.me/
+Plugin Name: TalkWithText SMS Notification for Woo Australia
+Plugin URI: https://www.talkwithtext.com.au/
+Description: A plugin for sending sms notification after placing orders in WooCommerce using TalkWithText SMS gateway.
+Version: 1.0
+Author: Sabbir Ahmed
+Author URI: http://web-apps.ninja/
 */
 
 // don't call the file directly
 if ( !defined( 'ABSPATH' ) ) exit;
 
 // Lib Directory Path Constant
-define( 'PLUGIN_LIB_PATH', dirname(__FILE__). '/lib' );
+define( 'SATSMS_PLUGIN_LIB_PATH', dirname(__FILE__). '/lib' );
 define( 'SATSMS_DIR', dirname(__FILE__) );
 
 // Requere settings api
-require_once PLUGIN_LIB_PATH. '/class.settings-api.php';
+require_once SATSMS_PLUGIN_LIB_PATH. '/class.settings-api.php';
 
 /**
  * Autoload class files on demand
