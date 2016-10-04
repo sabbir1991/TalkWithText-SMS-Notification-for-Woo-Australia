@@ -39,54 +39,6 @@ class SatSMS_Setting_Options {
      */
     function admin_menu() {
         add_menu_page( __( 'SMS Settings', 'satosms' ), __( 'SMS Settings', 'satosms' ), 'manage_options', 'sat-order-sms-notification-settings', array( $this, 'plugin_page' ), 'dashicons-email-alt' );
-        add_submenu_page( 'sat-order-sms-notification-settings', __( 'Send SMS to Any', 'satosms' ), __( 'Send SMS to Any', 'satosms' ), 'manage_options', 'sat-order-sms-send-any', array( $this, 'send_sms_to_any' ) );
-    }
-
-    /**
-     * Send SMS to any submenu callback
-     * @return void
-     */
-    function send_sms_to_any() {
-        ?>
-        <div class="wrap">
-            <h1><?php _e( 'Send SMS to Any Number', 'satosms' ); ?></h1>
-            <div class="postbox send_sms_to_any_notice">
-                <p><?php _e( 'Make sure that the message recipient number must have country code as an extension with phone number ( e.g: the number format must be like this <code>+8801671123456</code>), where <code>+88</code> country code as an extension', 'satosms' ); ?></p>
-            </div>
-            <?php if( isset( $_GET['message'] ) && ! empty( $_GET['message'] ) ): ?>
-                <div id="message" class="info notice notice-info is-dismissible">
-                    <p><?php echo $_GET['message']; ?></p>
-                    <button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>
-                </div>
-            <?php endif; ?>
-
-            <div class="postbox " id="satosms_send_sms_any">
-                <h3 class="hndle">Send SMS to Any</h3>
-                <div class="inside">
-                    <form class="initial-form" id="satosms-send-sms-any-form" method="post" action="" name="post">
-                        <p>
-                            <label for="satosms_receiver_number"><?php _e( 'Receiver Number', 'satosms' ) ?></label><br>
-                            <input type="text" name="satosms_receiver_number" id="satosms_receiver_number">
-                            <span><?php _e( 'Enter your sms receiver number, number must have an extension') ?></span>
-                        </p>
-
-                        <p>
-                            <label for="satosms_sms_body"><?php _e( 'SMS Body', 'satosms' ) ?></label><br>
-                            <textarea name="satosms_sms_body" id="satosms_sms_body" cols="50" rows="6"></textarea>
-                            <span><?php _e( 'Enter your message body what you like you want to send this receiver') ?></span>
-                        </p>
-
-                        <p>
-                            <?php wp_nonce_field( 'send_sms_to_any_action','send_sms_to_any_nonce' ); ?>
-                            <input type="submit" class="button button-primary" name="satosms_send_sms" value="<?php _e( 'Send SMS', 'satosms' ); ?>">
-                        </p>
-
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <?php
     }
 
     /**
@@ -129,8 +81,6 @@ class SatSMS_Setting_Options {
      * @return array settings fields
      */
     function get_settings_fields() {
-
-
         $buyer_message = "Thanks for purchasing\nYour [order_id] is now [order_status]\nThank you";
         $admin_message = "You have a new Order\nThe [order_id] is now [order_status]\n";
         $settings_fields = array(

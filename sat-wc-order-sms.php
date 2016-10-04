@@ -74,13 +74,11 @@ class Sat_WC_Order_SMS {
      */
     public function __construct() {
 
-
         // Instantiate necessary class
         $this->instantiate();
 
         // Localize our plugin
         add_action( 'init', array( $this, 'localization_setup' ) );
-        add_action( 'admin_init', array( $this, 'send_sms_to_any_receiver' ), 11 );
 
         // Loads frontend scripts and styles
         add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
@@ -391,34 +389,6 @@ class Sat_WC_Order_SMS {
         $product_list = implode( ',', $prodct_name );
 
         return $product_list;
-    }
-
-    /**
-     * Send SMS to any Number from admin panel
-     * @return void
-     */
-    function send_sms_to_any_receiver() {
-        if( isset( $_POST['satosms_send_sms'] ) && wp_verify_nonce( $_POST['send_sms_to_any_nonce'], 'send_sms_to_any_action' ) ) {
-            if( isset( $_POST['satosms_receiver_number'] ) && empty( $_POST['satosms_receiver_number'] ) ) {
-                wp_redirect( add_query_arg( array( 'page'=> 'sat-order-sms-send-any', 'message' => 'error' ), admin_url( 'admin.php' ) ) );
-            } else {
-                $active_gateway = 'talkwithtext';
-
-                if( empty( $active_gateway ) || $active_gateway == 'none' ) {
-
-                    wp_redirect( add_query_arg( array( 'page'=> 'sat-order-sms-send-any', 'message' => __( 'Empty username and API keys', 'satosms' ) ), admin_url( 'admin.php' ) ) );
-
-                } else {
-
-                    $receiver_sms_data['number']   = $_POST['satosms_receiver_number'];
-                    $receiver_sms_data['sms_body'] = $_POST['satosms_sms_body'];
-
-                    $receiver_response = SatSMS_SMS_Gateways::init()->$active_gateway( $receiver_sms_data );
-
-                    wp_redirect( add_query_arg( array( 'page'=> 'sat-order-sms-send-any', 'message' => $receiver_response ), admin_url( 'admin.php' ) ) );
-                }
-            }
-        }
     }
 
 } // Sat_WC_Order_SMS
