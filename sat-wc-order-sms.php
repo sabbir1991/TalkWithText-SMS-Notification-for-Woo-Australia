@@ -3,7 +3,7 @@
 Plugin Name: TalkWithText SMS Notification for Woo Australia
 Plugin URI: https://www.talkwithtext.com.au/
 Description: A plugin for sending sms notification after placing orders in WooCommerce using TalkWithText SMS gateway.
-Version: 1.0
+Version: 1.0.0
 Author: Sabbir Ahmed
 Author URI: http://web-apps.ninja/
 */
@@ -266,7 +266,6 @@ class Sat_WC_Order_SMS {
                     $admin_response             = SatSMS_SMS_Gateways::init()->$active_gateway( $admin_sms_data );
 
                     $order->add_order_note( $admin_response );
-
                 }
 
                 $buyer_sms_data['number']   = get_post_meta( $order_id, '_billing_phone', true );
@@ -274,9 +273,7 @@ class Sat_WC_Order_SMS {
                 $buyer_response             = SatSMS_SMS_Gateways::init()->$active_gateway( $buyer_sms_data );
 
                 $order->add_order_note( $buyer_response );
-
             } else {
-
                 if(  satosms_get_option( 'admin_notification', 'satosms_general', 'on' ) == 'on' ) {
                     $admin_sms_data['number']   = $admin_phone_number;
                     $admin_sms_data['sms_body'] = $this->pharse_sms_body( $admin_sms_body, $new_status, $order_id, $order_amount, $product_list );
@@ -364,12 +361,11 @@ class Sat_WC_Order_SMS {
         }
 
         $buyer_sms_data['number']   = get_post_meta( $_POST['order_id'], '_billing_phone', true );
-        $buyer_sms_data['sms_body'] = $_POST['textareavalue'];
+        $buyer_sms_data['sms_body'] = sanitize_text_field( $_POST['textareavalue'] );
 
         $buyer_response = SatSMS_SMS_Gateways::init()->$active_gateway( $buyer_sms_data );
 
         wp_send_json_success( array( 'message' => $buyer_response ) );
-
     }
 
     /**
