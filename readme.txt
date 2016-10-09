@@ -1,5 +1,5 @@
 === TalkWithText SMS Notification for Woo Australia ===
-Contributors: sabbir1991, talkwithtext
+Contributors: talkwithtext, sabbir1991
 Tags: order, order SMS, SMS order , notification, TalkWithText, sms, woocommerce order, woocommerce order notification,
 Requires at least: 4.0+
 Tested up to: 4.6

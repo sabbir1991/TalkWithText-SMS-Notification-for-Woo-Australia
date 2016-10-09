@@ -4,8 +4,8 @@ Plugin Name: TalkWithText SMS Notification for Woo Australia
 Plugin URI: https://www.talkwithtext.com.au/
 Description: A plugin for sending sms notification after placing orders in WooCommerce using TalkWithText SMS gateway.
 Version: 1.0.0
-Author: Sabbir Ahmed
-Author URI: http://web-apps.ninja/
+Author: TalkwithText
+Author URI: https://www.talkwithtext.com.au/
 */
 
 // don't call the file directly
