@@ -1,10 +1,10 @@
-# Copyright (C) 2016 Sabbir Ahmed
+# Copyright (C) 2016 TalkwithText
 # This file is distributed under the same license as the TalkWithText SMS Notification for Woo Australia package.
 msgid ""
 msgstr ""
 "Project-Id-Version: TalkWithText SMS Notification for Woo Australia 1.0.0\n"
 "Report-Msgid-Bugs-To: http://web-apps.ninja\n"
-"POT-Creation-Date: 2016-10-04 16:13:55+00:00\n"
+"POT-Creation-Date: 2016-10-11 16:55:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -74,7 +74,7 @@ msgstr ""
 #: classes/setting-options.php:125
 msgid ""
 "Enter your phone number prefix( country code ). if leave empty then this "
-"country code does not added autometically in checkout page"
+"country code need to be added manually in checkout page"
 msgstr ""
 
 #: classes/setting-options.php:132
@@ -252,15 +252,15 @@ msgstr ""
 msgid "Thanks for purchasing. Your [order_id] is now [order_status]. Thank you"
 msgstr ""
 
-#: sat-wc-order-sms.php:326
+#: sat-wc-order-sms.php:323
 msgid "Send SMS to Buyer"
 msgstr ""
 
-#: sat-wc-order-sms.php:339
+#: sat-wc-order-sms.php:336
 msgid "Send Custom SMS to this buyer"
 msgstr ""
 
-#: sat-wc-order-sms.php:340
+#: sat-wc-order-sms.php:337
 msgid "Message will be send in this buyer billing number "
 msgstr ""
 
@@ -268,7 +268,7 @@ msgstr ""
 msgid "TalkWithText SMS Notification for Woo Australia"
 msgstr ""
 
-#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
 msgid "https://www.talkwithtext.com.au/"
 msgstr ""
 
@@ -279,9 +279,5 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Sabbir Ahmed"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://web-apps.ninja/"
+msgid "TalkwithText"
 msgstr ""
