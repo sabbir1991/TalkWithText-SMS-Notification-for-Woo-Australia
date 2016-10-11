@@ -122,7 +122,7 @@ class SatSMS_Setting_Options {
                 array(
                     'name' => 'phone_number_prefix',
                     'label' => __( 'Phone number prefix', 'satosms' ),
-                    'desc' => __( 'Enter your phone number prefix( country code ). if leave empty then this country code does not added autometically in checkout page', 'satosms' ),
+                    'desc' => __( 'Enter your phone number prefix( country code ). if leave empty then this country code need to be added manually in checkout page', 'satosms' ),
                     'type' => 'text',
                     'default' => ''
                 ),
