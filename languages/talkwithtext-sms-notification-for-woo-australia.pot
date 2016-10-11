@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TalkWithText SMS Notification for Woo Australia 1.0.0\n"
 "Report-Msgid-Bugs-To: http://web-apps.ninja\n"
-"POT-Creation-Date: 2016-10-11 16:55:41+00:00\n"
+"POT-Creation-Date: 2016-10-11 17:09:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -236,31 +236,31 @@ msgstr ""
 msgid "Select"
 msgstr ""
 
-#: sat-wc-order-sms.php:184
+#: sat-wc-order-sms.php:209
 msgid "<strong>Send Notification Via SMS</strong> must be required"
 msgstr ""
 
-#: sat-wc-order-sms.php:196
+#: sat-wc-order-sms.php:221
 msgid "Buyer want to get SMS notification"
 msgstr ""
 
-#: sat-wc-order-sms.php:227
+#: sat-wc-order-sms.php:252
 msgid "You have a new Order. The [order_id] is now [order_status]"
 msgstr ""
 
-#: sat-wc-order-sms.php:228
+#: sat-wc-order-sms.php:253
 msgid "Thanks for purchasing. Your [order_id] is now [order_status]. Thank you"
 msgstr ""
 
-#: sat-wc-order-sms.php:323
+#: sat-wc-order-sms.php:348
 msgid "Send SMS to Buyer"
 msgstr ""
 
-#: sat-wc-order-sms.php:336
+#: sat-wc-order-sms.php:361
 msgid "Send Custom SMS to this buyer"
 msgstr ""
 
-#: sat-wc-order-sms.php:337
+#: sat-wc-order-sms.php:362
 msgid "Message will be send in this buyer billing number "
 msgstr ""
 
