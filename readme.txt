@@ -2,7 +2,7 @@
 Contributors: talkwithtext, sabbir1991
 Tags: order, order SMS, SMS order , notification, TalkWithText, sms, woocommerce order, woocommerce order notification,
 Requires at least: 4.0+
-Tested up to: 4.6
+Tested up to: 4.9.4
 Stable tag: trunk
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,13 @@ Nothin here right now.
 No screenshot
 
 == Changelog ==
+
+= 1.0.2 =
+- Fix settings api issue
+
+= 1.0.1 =
+- Update settings api core library
+- Compatibility with WC 3.0+
 
 = 1.0.0 =
 Initial version released
