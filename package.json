@@ -1,6 +1,6 @@
 {
   "name": "talkwithtext-sms-notification-for-woo-australia",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A plugin for sending sms notification after placing orders in WooCommerce using TalkWithText SMS gateway.",
   "author": "Sabbir Ahmed",
   "license": "GPL",

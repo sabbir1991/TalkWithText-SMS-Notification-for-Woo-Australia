@@ -13,7 +13,7 @@ class SatSMS_Setting_Options {
 
     function __construct() {
 
-        $this->settings_api = new WeDevs_Settings_API;
+        $this->settings_api = new WeDevs_Settings_API();
 
         add_action( 'admin_init', array($this, 'admin_init') );
         add_action( 'admin_menu', array($this, 'admin_menu') );
@@ -142,6 +142,8 @@ class SatSMS_Setting_Options {
                     'options' => wc_get_order_statuses()
                 )
             ) ),
+
+            'satosms_gateway' => array(),
 
             'satosms_message' => apply_filters( 'satosms_message_settings',  array(
                 array(
